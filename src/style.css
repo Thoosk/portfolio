@@ -4,13 +4,82 @@
   position: fixed;
 }
 
-.landing {
+/* .landing {
   color: white;
   min-height: 100vh;
   background: url(./images/intro.png);
   background-size: cover;
   padding: 0rem 5rem;
+} */
+
+
+
+.landing {
+  background-image: url(./images/intro.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 100vh;
+  background-size: cover;
+  padding: 0rem 5rem;
 }
+
+@supports (filter: brightness(4)) and (mix-blend-mode: color) {
+  .landing {
+    position: relative;
+  }
+  .landing:before, .landing:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-color: brown;
+    background-blend-mode: screen;
+    mix-blend-mode: color;
+    filter: brightness(4);
+  }
+} 
+
+/* ALT LANDING IMG */
+
+/* .landing {
+  color: white;
+  min-height: 100vh;
+  padding: 0rem 5rem;
+  background-image: url(./images/intro.png);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (transform: scaleX(-1)) {
+  .landing {
+    position: relative;
+  }
+  .landing:before, .landing:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: inherit;
+  }
+  .landing:before {
+    left: 0;
+    right: 50%;
+    transform: scaleX(-1);
+  }
+  .landing:after {
+    left: 50%;
+    right: 0;
+  }
+}
+
+*/
+
 
 nav {
   display: flex;
@@ -33,14 +102,16 @@ nav {
   font-size: 2rem;
 }
 
-.big-text {
+.main-text {
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 25%;
   transform: translate(-50%, 30%);
   font-size: 5rem;
   color: #c1b206;
 }
+
+
 
 .intro {
   background: black;
@@ -81,18 +152,14 @@ nav {
 
 /* Responsive NAV PART */
 
-/* header {
-  height: 100vh;
-  background-size: cover;
-} */
-
 nav ul {
   background-color: #fcfefd;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 10vh;
+  min-height: 6vh;
   position: fixed;
+  z-index: 1;
   top: 0;
   right: 0;
   width: 100%;
@@ -103,7 +170,7 @@ nav ul {
 #projects,
 #contact {
   font-size: 3rem;
-  height: 100vh;
+  height: 98vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,4 +221,78 @@ nav li {
 /* when an anchor tag gets class "active", the after tag gets translated back to 0 */
 a.active::after {
   transform: translateX(0%);
+}
+
+/* START NORMAL */
+
+#projects {
+  display: flex;
+}
+
+#projects h1 {
+  position: absolute;
+}
+
+#project_block {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 5rem 1rem;
+}
+
+.project-tile {
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
+  margin-right: 1rem;
+  will-change: transform;
+  transition: transform 450ms;
+}
+
+.project-tile:hover {
+  transition: transform 125ms;
+  transform: translateY(-10px);
+}
+
+
+.project-tile a {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
+  transition: 0.7s ease;
+}
+
+.project_preview {
+  height: 15rem;
+  width: 20rem;
+  margin-top: 2rem;
+}
+
+
+
+
+/* CONTACT */
+#contact {
+  display: flex;
+
+}
+
+#contact h1 {
+  color: black;
+  position: absolute;
+}
+
+#contact-logos {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.contact-logo {
+  height: 10rem;
+  width: 10rem;
 }
