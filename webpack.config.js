@@ -23,13 +23,13 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
 
-      {
-        test: /\.(png|jpg|jpeg)$/i,
-        type: "asset/resource",
-      },
+      // {
+      //   test: /\.(svg|png|jpg|jpeg)$/i,
+      //   type: "asset/resource",
+      // },
 
       {
-        test: /\.(svg|gif|jpe?g)$/i,
+        test: /\.(svg|png|gif|jpe?g)$/i,
         loader: "file-loader",
         options: {
           name: "[name].[ext]",

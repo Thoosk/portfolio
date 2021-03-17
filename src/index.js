@@ -8,6 +8,8 @@ import projectsArray from "./projects";
 
 import contactsArray from "./contact";
 
+import infos from "./about";
+
 navAnimation();
 introAnimation();
 
@@ -56,7 +58,7 @@ const createContactBlock = (contacts) => {
   contacts.forEach((contact) => {
     const contactImg = createImage(contact.url);
     contactImg.alt = contact.imgAlt;
-    contactImg.classList.add("contact_logo");
+    contactImg.classList.add("contact-logo");
     const contactTag = document.createElement("a");
     contactTag.target = "_blank";
     contactTag.href = contact.link;
@@ -72,3 +74,31 @@ const createContactBlock = (contacts) => {
 const contactsBlock = createContactBlock(contactsArray);
 const contactElements = document.querySelector("#contact");
 contactElements.appendChild(contactsBlock);
+
+// ABOUT
+
+const createAboutBlock = (basicInfos) => {
+  // left side
+  const aboutBlockLeft = document.createElement("div");
+  aboutBlockLeft.setAttribute("id", "left-side");
+
+  const aboutImg = createImage(basicInfos.imgUrl);
+  aboutImg.alt = basicInfos.imgAlt;
+  const nameH2 = document.createElement("h2");
+  nameH2.innerHTML = basicInfos.name;
+  const cityH3 = document.createElement("h3");
+  cityH3.innerHTML = basicInfos.city;
+  const ageH4 = document.createElement("h4");
+  ageH4.innerHTML = basicInfos.age;
+
+  aboutBlockLeft.appendChild(aboutImg);
+  aboutBlockLeft.appendChild(nameH2);
+  aboutBlockLeft.appendChild(cityH3);
+  aboutBlockLeft.appendChild(ageH4);
+
+  return aboutBlockLeft;
+};
+
+const aboutSection = document.querySelector("#about");
+const aboutBlock = createAboutBlock(infos);
+aboutSection.appendChild(aboutBlock);

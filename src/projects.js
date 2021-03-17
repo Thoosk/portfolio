@@ -67,6 +67,12 @@ const calculatorProject = {
   imgAlt: "Preview of Web Calculator",
   link: "https://thoosk.github.io/calculator/",
 };
+const projectMissing = {
+  name: "more to come..",
+  url: calcImg,
+  imgAlt: "GIF",
+  link: "https://thoosk.github.io/calculator/",
+};
 
 const projectsArray = [
   weatherProject,
@@ -78,6 +84,7 @@ const projectsArray = [
   libraryProject,
   etchasketchProject,
   calculatorProject,
+  projectMissing
 ];
 
 export default projectsArray;
