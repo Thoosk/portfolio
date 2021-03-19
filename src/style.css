@@ -142,6 +142,7 @@ nav ul {
     #181818,
     #232300 /* #4c4c09 */
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-bottom: dotted 2px #f4f3ee;
 }
 
 #about {
@@ -156,6 +157,8 @@ nav ul {
     #3c3b3f,
     #181818
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-bottom: dotted 2px #f4f3ee;
 }
 
 #projects {
@@ -170,6 +173,7 @@ nav ul {
     #384754,
     #3c3b3f
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-bottom: dotted 2px #f4f3ee;
 }
 
 #contact {
@@ -213,7 +217,6 @@ nav li {
   height: 2rem;
 }
 
-/* when an anchor tag gets class "active", the after tag gets translated back to 0 */
 a.active::after {
   will-change: transform;
   transform: translateX(0%);
@@ -273,7 +276,7 @@ a.active::after {
 }
 
 #contact h1 {
-  color: black;
+  color: #fcfefd;
   position: absolute;
   transform: translateY(-15rem);
 }
@@ -289,6 +292,14 @@ a.active::after {
 .contact-logo {
   height: 10rem;
   width: 10rem;
+  will-change: transform;
+  transition: transform 450ms;
+}
+
+.contact-logo:hover {
+  will-change: transform;
+  transition: transform 125ms;
+  transform: translateY(-10px);
 }
 
 /* ABOUT */
@@ -396,4 +407,8 @@ main li {
 #about p {
   font-size: 1rem;
   transform: rotate(-90deg) translateX(39rem) translateY(-1rem);
+}
+
+#favourite li::marker {
+  content: "";
 }

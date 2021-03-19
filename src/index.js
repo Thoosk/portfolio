@@ -141,7 +141,7 @@ const createAboutBlock = (basicInfos) => {
   personalSection.setAttribute("id", "personal");
 
   const likingsH4 = document.createElement("h4");
-  likingsH4.innerHTML = "Likings";
+  likingsH4.innerHTML = "Likes";
   personalSection.appendChild(likingsH4);
 
   const ulLikings = document.createElement("ul");
@@ -159,6 +159,7 @@ const createAboutBlock = (basicInfos) => {
   personalSection.appendChild(favH4);
 
   const ulFav = document.createElement("ul");
+  ulFav.setAttribute("id", "favourite");
 
   const favThings = Object.entries(basicInfos.favouriteThings);
   favThings.forEach((el) => {

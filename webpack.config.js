@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
 
   entry: "./src/index.js",
   output: {
@@ -11,34 +11,27 @@ module.exports = {
 
   module: {
     rules: [
-      //   {
-      //     test: /\.js$/,
-      //     exclude: /node_modules/,
-      //     use: {
-      //       loader: "babel-loader",
-      //     },
-      //   },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
 
-      // {
-      //   test: /\.(svg|png|jpg|jpeg)$/i,
-      //   type: "asset/resource",
-      // },
-
       {
         test: /\.(svg|png|gif|jpe?g)$/i,
         loader: "file-loader",
         options: {
-          name: "[name].[ext]",
+          name: "images/[name].[ext]",
         },
       },
     ],
   },
-
-  devtool: "source-map",
 
   devServer: {
     contentBase: "./dist",

@@ -5,7 +5,7 @@ const introAnimation = async () => {
 
   timeline.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
 
-  timeline.to(".intro", { y: "-100%", duration: 1 }, "-=0.8");
+  timeline.to(".intro", { y: "-100%", duration: 1 }, "-=0.9");
 
   timeline.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
 
