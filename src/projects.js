@@ -7,6 +7,7 @@ import gugleImg from "./images/projectImgs/gugle.png";
 import etchImg from "./images/projectImgs/etchasketch.png";
 import calcImg from "./images/projectImgs/calc.png";
 import cafeImg from "./images/projectImgs/cafewolf.png";
+import placeholder from "./images/projectImgs/placeholder.jpg";
 
 // IDEA: putting each project as an object in an array and then loop thorugh it in the createProjectTile() method
 
@@ -69,9 +70,9 @@ const calculatorProject = {
 };
 const projectMissing = {
   name: "more to come..",
-  url: calcImg,
-  imgAlt: "GIF",
-  link: "https://thoosk.github.io/calculator/",
+  url: placeholder,
+  imgAlt: "Picture of Michael Scott",
+  link: "#road",
 };
 
 const projectsArray = [
@@ -84,7 +85,7 @@ const projectsArray = [
   libraryProject,
   etchasketchProject,
   calculatorProject,
-  projectMissing
+  projectMissing,
 ];
 
 export default projectsArray;
