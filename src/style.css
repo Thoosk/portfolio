@@ -496,7 +496,7 @@ main li {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 360px), (max-height: 740px) {
   nav a {
     font-size: 1rem;
   }
