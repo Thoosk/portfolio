@@ -417,3 +417,171 @@ main li {
   filter: invert(97%) sepia(100%) saturate(13%) hue-rotate(211deg)
     brightness(103%) contrast(105%);
 }
+
+/* media queries */
+
+@media (max-width: 1400px) {
+  #current-road p {
+    font-size: 1.2rem;
+  }
+
+  #skills ul {
+    line-height: 2rem;
+  }
+  #skills li {
+    font-size: 1.3rem;
+  }
+
+  #skills h4 {
+    font-size: 1.4rem;
+  }
+
+  #about p {
+    transform: rotate(-90deg) translateX(25rem) translateY(11rem);
+  }
+
+  #projects h3 {
+    font-size: 1.3rem;
+  }
+
+  #projects img {
+    height: 12rem;
+    width: 17rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1028px) {
+  #about p {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  #current-road p {
+    font-size: 0.9rem;
+  }
+
+  #about ul {
+    line-height: 3rem;
+  }
+  #about li {
+    font-size: 1.3rem;
+  }
+
+  #about h4 {
+    font-size: 1.4rem;
+  }
+
+  #pets {
+    width: 20rem;
+    height: 15rem;
+  }
+
+  #projects h3 {
+    font-size: 1.3rem;
+  }
+
+  #projects img {
+    height: 8rem;
+    width: 13rem;
+    margin-top: 1rem;
+  }
+
+  #project_block {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0rem 0rem;
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 360px) {
+  nav a {
+    font-size: 1rem;
+  }
+
+  .main-text {
+    transform: translate(-25%, 30%);
+  }
+
+  #current-road h4 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0 0.5rem;
+  }
+  #current-road p {
+    font-size: 0.5rem;
+    line-height: 1rem;
+    margin: 1rem 0 0 0.5rem;
+  }
+
+  #skills {
+    margin: 2rem 0.5rem 1.5rem 0;
+  }
+
+  #skills ul {
+    line-height: 2rem;
+  }
+  #skills li {
+    font-size: 1rem;
+  }
+
+  #skills h4 {
+    font-size: 1.2rem;
+  }
+
+  #about img {
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem 0 1.5rem 0.5rem;
+  }
+
+  .left-side h2,
+  h3,
+  h4 {
+    margin: 1rem 0 0 0.5rem;
+  }
+
+  #about ul {
+    line-height: 2rem;
+  }
+  #about li {
+    font-size: 1rem;
+  }
+
+  #about h2 {
+    font-size: 1.8rem;
+  }
+  #about h3 {
+    font-size: 1.4rem;
+  }
+
+  #about h4 {
+    font-size: 1.2rem;
+  }
+
+  #pets {
+    width: 15rem;
+    height: 10rem;
+  }
+
+  #projects h3 {
+    font-size: 1rem;
+  }
+
+  #projects img {
+    height: 4rem;
+    width: 10rem;
+  }
+
+  #project_block {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0rem 0rem;
+    margin-top: 0rem;
+  }
+
+  .project-tile {
+    margin-right: 0;
+  }
+}
