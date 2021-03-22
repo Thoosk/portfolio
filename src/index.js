@@ -186,6 +186,7 @@ const createContactBlock = (contacts) => {
 
   contacts.forEach((contact) => {
     const contactImg = createImage(contact.url);
+    contactImg.classList.add("filter-contact");
     contactImg.alt = contact.imgAlt;
     contactImg.classList.add("contact-logo");
     const contactTag = document.createElement("a");

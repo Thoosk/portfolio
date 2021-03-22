@@ -412,3 +412,8 @@ main li {
 #favourite li::marker {
   content: "";
 }
+
+.filter-contact {
+  filter: invert(97%) sepia(100%) saturate(13%) hue-rotate(211deg)
+    brightness(103%) contrast(105%);
+}
