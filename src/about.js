@@ -17,14 +17,7 @@ const profileInfo = {
     "Java",
   ],
   level: "Junior Dev",
-  futureSkills: [
-    "Sass",
-    "Typescript",
-    "React / Angular",
-    "Gatsby",
-    "GraphQL",
-    "Pop_OS!",
-  ],
+  futureSkills: ["Sass", "Typescript", "React / Angular", "Gatsby", "GraphQL"],
   likes: ["Books", "Nature", "Hiking", "Photography", "Music", "Animals"],
   favouriteThings: {
     book: "Witcher Series",
